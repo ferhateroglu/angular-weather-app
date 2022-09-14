@@ -1,0 +1,49 @@
+
+<div class="container" *ngIf="weatherData">
+
+  <div class="row">
+    <div class="search">
+      <form #form="ngForm" (submit)="onSubmit()">
+        <input type="text" name="city" id="" placeholder="enter a city name"
+        [(ngModel)]="cityName">
+      </form>
+      <fa-icon [icon]="iSearch" (click)="onSubmit()"></fa-icon>
+    </div>
+    <div class="card">
+
+      <div class="card-head">
+        <div class="card-img-cold" *ngIf="weatherData.current.temp_c < 15" ></div>
+        <div class="card-img-hot" *ngIf="weatherData.current.temp_c > 15" ></div>
+        <div class="weather-data">
+          <div class="loc">{{weatherData.location.name}}</div>
+          <div class="temp" >{{ weatherData.current.temp_c | number: '1.0-0'}}°C</div>
+          <img src={{weatherData.current.condition.icon}} alt="">
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="widgets">
+          <div class="widget">
+            <fa-icon [icon]="iTemperatureFull" size="2x"></fa-icon>
+            <span>{{weatherData.current.feelslike_c+" feels"}}</span>
+          </div>
+          <div class="widget">
+            <fa-icon [icon]="iHumidity"  size="2x"></fa-icon>
+            <span>{{weatherData.current.humidity+"%"}}</span>
+          </div>
+          <div class="widget">
+            <fa-icon [icon]="iWind"  size="2x"></fa-icon>
+            <span>{{weatherData.current.wind_kph + " km/h"}}</span>
+          </div>
+          <div class="widget">
+            <fa-icon [icon]="iCompass"  size="2x"></fa-icon>
+            <span>{{weatherData.current.wind_degree+"° "+weatherData.current.wind_dir}}</span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,159 @@
+.search {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search form{
+    margin-right: 10px;
+
+}
+.search input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--blue-2);
+    box-shadow: 10px 10px 10px var(--shadow-dark);
+    text-align: center;
+}
+
+.search input:focus {
+    outline: 2px solid var(--blue-3);
+}
+.search input:hover {
+    background-color: var(--blue-3);
+}
+.search fa-icon{
+    color: var(--white);
+    font-size: 1.2rem;
+    background-color: var(--blue-2);
+    border-radius: 10px;
+    padding: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    box-shadow: 10px 10px 10px var(--shadow-dark);
+}
+.search fa-icon:hover{
+    background-color: var(--blue-3);
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 60vh;
+    box-shadow: 10px 10px 10px var(--shadow-dark);
+    border-radius: 10px 10px 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-head {
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+    align-items: stretch;
+    justify-content: center;
+    position: relative;
+}
+
+.card-img-hot {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(249, 168, 63, .8) 0%, rgba(207, 57, 57, .8) 70%);
+    border-radius: 10px 0px 0px 10px;
+}
+
+.card-img-cold {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(85, 122, 202, 0.5) 0%, rgba(32, 35, 51, .8) 50%);
+    border-radius: 10px 0px 0px 10px;
+}
+
+.weather-data {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    height: 100%;
+}
+
+.weather-data img {
+    width: 90px;
+}
+
+.loc {
+    width: 100%;
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.temp {
+    width: 100%;
+    color: var(--white);
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.weather-data>* {
+    padding: .5rem;
+}
+
+
+.card-body {
+    min-width: 50%;
+    border-radius: 0 10px 10px 0;
+    background-color: var(--blue-2);
+    padding: 1rem;
+
+}
+
+.widgets {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    height: 100%;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+.widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    width: calc(50% - 10px);
+    background-color: var(--blue-3);
+    text-align: center;
+}
+
+.widget fa-icon,
+.widget span {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    color: var(--white);
+}
+
+.widget span {
+    font-size: .9rem;
+    letter-spacing: 1px;
+}
